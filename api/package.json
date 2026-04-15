@@ -1,0 +1,29 @@
+{
+    "name": "booking-scraper-dashboard-server",
+    "version": "1.0.0",
+    "description": "Backend for Booking Scraper Dashboard",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "bun run index.js",
+        "dev": "bun --watch index.js"
+    },
+    "dependencies": {
+        "@turf/turf": "^7.3.0",
+        "bcryptjs": "^3.0.3",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.3",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.3",
+        "multer": "^2.0.2",
+        "node-cron": "^4.2.1",
+        "pg": "^8.16.3",
+        "socket.io": "^4.7.4",
+        "wkx": "^0.5.0",
+        "xlsx": "^0.18.5",
+        "zod": "^4.2.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.3"
+    }
+}

@@ -1,0 +1,49 @@
+services:
+  postgres:
+    image: postgis/postgis:15-3.4-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: your_secure_password_here
+      POSTGRES_DB: scraper_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U user -d scraper_db" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile # Adjust paths as needed
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=postgres
+      - DB_USER=user
+      - DB_PASS=your_secure_password_here
+      - DB_NAME=scraper_db
+      - DB_PORT=5432
+      - SOCKS5_PROXY=host.docker.internal:1080
+      - USE_PROXY_CHAIN=false
+      - JWT_SECRET=your_jwt_secret_here
+      - PROXY_LIST_URL=your_proxy_list_url_here
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./data:/app/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile # Adjust paths as needed
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
