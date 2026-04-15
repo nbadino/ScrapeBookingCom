@@ -403,7 +403,7 @@ class ScraperManager {
 
         const args = [
             '--concurrency', (finalConfig.concurrency || '10').toString(),
-            '--db-url', || `postgres://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
+            '--db-url', process.env.DATABASE_URL || `postgres://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
             `--headless=${finalConfig.headless === false ? 'false' : 'true'}`
         ];
 
@@ -704,7 +704,7 @@ class ScraperManager {
     async runPriceScraperProcess(searchId, monitorRunDateId, config, checkinDate) {
         const args = [
             '--search-id', searchId.toString(),
-            '--db-url', || `postgres://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
+            '--db-url', process.env.DATABASE_URL || `postgres://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
             '--concurrency', (config.concurrency || 10).toString(),
             `--headless=${config.headless === false ? 'false' : 'true'}`
         ];
