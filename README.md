@@ -1,4 +1,4 @@
-# 🏨 ScrapeBookingCom
+# ScrapeBookingCom
 
 > **High-Performance Booking.com Scraper Engine & Dashboard**
 
@@ -11,17 +11,17 @@
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- ⚡ **High-Performance Core**: Go-based engine capable of handling thousands of concurrent requests.
-- 🛡️ **Anti-Bot Sophistication**: Advanced fingerprinting and proxy rotation (SOCKS5/HTTP/Chain).
-- 📊 **Real-time Monitoring**: Premium React dashboard with live metrics, speed tracking, and error reporting.
-- 🗺️ **Sitemap Intelligence**: Optimized Python downloader for massive-scale discovery of hotel URLs.
-- 🐳 **Docker-Ready**: Orchestrated with Docker Compose for seamless deployment.
+- **High-Performance Core**: Go-based engine capable of handling thousands of concurrent requests.
+- **Anti-Bot Sophistication**: Advanced fingerprinting and proxy rotation (SOCKS5/HTTP/Chain).
+- **Real-time Monitoring**: Premium React dashboard with live metrics, speed tracking, and error reporting.
+- **Sitemap Intelligence**: Optimized Python downloader for massive-scale discovery of hotel URLs.
+- **Docker-Ready**: Orchestrated with Docker Compose for seamless deployment.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 graph TD
@@ -36,7 +36,7 @@ graph TD
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 - `/bin`: Contains the compiled High-Performance Scraper Engine (Linux x64).
 - `/api`: Node.js orchestration layer and metrics tracking.
@@ -46,7 +46,7 @@ graph TD
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -59,6 +59,7 @@ graph TD
    ```bash
    git clone https://github.com/nbadino/ScrapeBookingCom.git
    cd ScrapeBookingCom
+   ```
 2. **Configure Environment**:
    Edit `docker-compose.yml` to include your proxies and database credentials.
 
@@ -72,7 +73,7 @@ graph TD
 
 ---
 
-## ⚙️ Core Engine
+## Core Engine
 
 The core scraper engine is provided as a pre-compiled high-performance binary in the `/bin` directory. This engine is optimized for:
 - Efficient memory usage.
@@ -83,12 +84,12 @@ The core scraper engine is provided as a pre-compiled high-performance binary in
 
 ---
 
-## 📜 Legal & Ethical Note
+## Legal & Ethical Note
 
 This tool is for **educational and research purposes only**. Users are responsible for complying with Booking.com's Terms of Service and local data privacy laws. Always use scrapers ethically and respect `robots.txt` where possible.
 
 ---
 
 <p align="center">
-  Developed with ❤️ by <a href="https://github.com/nbadino">nbadino</a>
+  Developed by <a href="https://github.com/nbadino">nbadino</a>
 </p>
