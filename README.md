@@ -7,7 +7,7 @@
 [![Python Version](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python)](https://www.python.org/)
 [![React](https://img.shields.io/badge/Dashboard-React-61DAFB?style=flat&logo=react)](https://react.dev/)
 
-**ScrapeBookingCom** is a professional-grade scraping ecosystem designed for high-concurrency data extraction. It combines a high-performance Go-based core engine with a sophisticated Node.js orchestration layer and a real-time React dashboard.
+**ScrapeBookingCom** is a high-performance scraping ecosystem designed for high-concurrency data extraction. It combines a high-performance Go-based core engine with a sophisticated Node.js orchestration layer and a real-time React dashboard, that allows for +90req/s on a cheap vps and a large proxy list. 
 
 ---
 
